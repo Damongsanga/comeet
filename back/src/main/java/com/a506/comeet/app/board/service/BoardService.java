@@ -1,6 +1,6 @@
 package com.a506.comeet.app.board.service;
 
-import com.a506.comeet.app.board.controller.dto.*;
+import com.a506.comeet.app.board.dto.*;
 import com.a506.comeet.app.board.entity.Board;
 import com.a506.comeet.app.board.repository.BoardRepository;
 import com.a506.comeet.app.keyword.controller.KeywordResponseDto;
@@ -11,10 +11,10 @@ import com.a506.comeet.app.member.repository.MemberRepository;
 import com.a506.comeet.app.member.service.LikeService;
 import com.a506.comeet.app.room.entity.Room;
 import com.a506.comeet.app.room.repository.RoomRepository;
-import com.a506.comeet.common.enums.BoardType;
-import com.a506.comeet.common.enums.FreeBoardCategory;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.global.enums.BoardType;
+import com.a506.comeet.global.enums.FreeBoardCategory;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -26,7 +26,7 @@ import org.springframework.validation.annotation.Validated;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.a506.comeet.error.errorcode.CustomErrorCode.*;
+import static com.a506.comeet.exception.errorcode.CustomErrorCode.*;
 
 @Slf4j
 @Service

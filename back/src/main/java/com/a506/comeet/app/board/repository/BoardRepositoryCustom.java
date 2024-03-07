@@ -1,7 +1,7 @@
 package com.a506.comeet.app.board.repository;
 
-import com.a506.comeet.app.board.controller.dto.BoardListRequestDto;
-import com.a506.comeet.app.board.controller.dto.BoardListResponseDto;
+import com.a506.comeet.app.board.dto.BoardListRequestDto;
+import com.a506.comeet.app.board.dto.BoardListResponseDto;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

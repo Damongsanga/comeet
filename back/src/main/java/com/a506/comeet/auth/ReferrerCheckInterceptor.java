@@ -1,7 +1,7 @@
 package com.a506.comeet.auth;
 
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;

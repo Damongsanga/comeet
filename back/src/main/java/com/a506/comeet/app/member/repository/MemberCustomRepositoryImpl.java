@@ -1,9 +1,9 @@
 package com.a506.comeet.app.member.repository;
 
-import com.a506.comeet.app.member.controller.dto.MemberDetailResponseDto;
-import com.a506.comeet.app.member.controller.dto.MemberDuplicationRequestDto;
-import com.a506.comeet.app.member.controller.dto.MemberSimpleResponseDto;
-import com.a506.comeet.app.member.controller.dto.TilSimpleResponseDto;
+import com.a506.comeet.app.member.dto.MemberDetailResponseDto;
+import com.a506.comeet.app.member.dto.MemberDuplicationRequestDto;
+import com.a506.comeet.app.member.dto.MemberSimpleResponseDto;
+import com.a506.comeet.app.member.dto.TilSimpleResponseDto;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static com.a506.comeet.app.etc.entity.QTil.til;
+import static com.a506.comeet.app.til.entity.Qtil.til;
 import static com.a506.comeet.app.member.entity.QFollow.follow;
 import static com.a506.comeet.app.member.entity.QMember.member;
 

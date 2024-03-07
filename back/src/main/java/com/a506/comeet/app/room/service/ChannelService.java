@@ -1,14 +1,14 @@
 package com.a506.comeet.app.room.service;
 
-import com.a506.comeet.app.room.controller.dto.ChannelCreateRequestDto;
-import com.a506.comeet.app.room.controller.dto.ChannelUpdateRequestDto;
+import com.a506.comeet.app.room.dto.ChannelCreateRequestDto;
+import com.a506.comeet.app.room.dto.ChannelUpdateRequestDto;
 import com.a506.comeet.app.room.entity.Channel;
 import com.a506.comeet.app.room.entity.Room;
 import com.a506.comeet.app.room.repository.ChannelRepository;
 import com.a506.comeet.app.room.repository.RoomRepository;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

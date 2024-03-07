@@ -1,9 +1,9 @@
 package com.a506.comeet.app.room.repository;
 
-import com.a506.comeet.app.room.controller.dto.*;
+import com.a506.comeet.app.room.dto.*;
 import com.a506.comeet.app.room.entity.Room;
-import com.a506.comeet.common.enums.RoomConstraints;
-import com.a506.comeet.common.enums.RoomType;
+import com.a506.comeet.global.enums.RoomConstraints;
+import com.a506.comeet.global.enums.RoomType;
 import com.querydsl.core.types.Order;
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.Projections;

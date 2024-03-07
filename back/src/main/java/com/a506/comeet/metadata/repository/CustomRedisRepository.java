@@ -1,9 +1,7 @@
 package com.a506.comeet.metadata.repository;
 
-import com.a506.comeet.common.util.DateParser;
-import com.a506.comeet.common.util.KeyUtil;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.global.util.DateParser;
+import com.a506.comeet.global.util.KeyUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessException;
@@ -11,7 +9,6 @@ import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 

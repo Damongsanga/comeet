@@ -1,6 +1,6 @@
 package com.a506.comeet.metadata.repository;
 
-import com.a506.comeet.common.util.DateParser;
+import com.a506.comeet.global.util.DateParser;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataAccessException;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
-import static com.a506.comeet.common.util.KeyUtil.getCurrentMemberKey;
+import static com.a506.comeet.global.util.KeyUtil.getCurrentMemberKey;
 
 @RequiredArgsConstructor
 @Component

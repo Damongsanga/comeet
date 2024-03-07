@@ -1,15 +1,15 @@
 package com.a506.comeet.app.board.repository;
 
-import com.a506.comeet.app.board.controller.dto.BoardListRequestDto;
-import com.a506.comeet.app.board.controller.dto.BoardListResponseDto;
+import com.a506.comeet.app.board.dto.BoardListRequestDto;
+import com.a506.comeet.app.board.dto.BoardListResponseDto;
 import com.a506.comeet.app.board.entity.Board;
 import com.a506.comeet.app.keyword.controller.KeywordResponseDto;
 import com.a506.comeet.app.keyword.entity.RoomKeyword;
 import com.a506.comeet.app.room.entity.Room;
-import com.a506.comeet.common.enums.BoardSortBy;
-import com.a506.comeet.common.enums.BoardType;
-import com.a506.comeet.common.enums.FreeBoardCategory;
-import com.a506.comeet.common.enums.RecruitBoardCategory;
+import com.a506.comeet.global.enums.BoardSortBy;
+import com.a506.comeet.global.enums.BoardType;
+import com.a506.comeet.global.enums.FreeBoardCategory;
+import com.a506.comeet.global.enums.RecruitBoardCategory;
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.Expressions;

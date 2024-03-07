@@ -1,7 +1,7 @@
 package com.a506.comeet.app.room.entity;
 
 import com.a506.comeet.app.member.entity.Member;
-import com.a506.comeet.common.BaseEntity;
+import com.a506.comeet.global.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

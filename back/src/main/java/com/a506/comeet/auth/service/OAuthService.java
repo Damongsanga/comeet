@@ -1,17 +1,17 @@
 package com.a506.comeet.auth.service;
 
-import com.a506.comeet.app.etc.repository.NoteRepository;
+import com.a506.comeet.app.note.repository.NoteRepository;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.repository.MemberRepository;
-import com.a506.comeet.app.room.controller.dto.RoomSimpleResponseDto;
+import com.a506.comeet.app.room.dto.RoomSimpleResponseDto;
 import com.a506.comeet.app.room.repository.RoomMemberRepository;
 import com.a506.comeet.auth.JwtToken;
 import com.a506.comeet.auth.JwtTokenProvider;
 import com.a506.comeet.auth.controller.dto.LoginResponseDto;
 import com.a506.comeet.auth.controller.dto.OAuthAccessTokenResponse;
 import com.a506.comeet.auth.controller.dto.OAuthMemberInfoResponse;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,8 +25,8 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
-import static com.a506.comeet.common.enums.SocialLoginType.GITHUB;
-import static com.a506.comeet.error.errorcode.CustomErrorCode.NO_MEMBER;
+import static com.a506.comeet.global.enums.SocialLoginType.GITHUB;
+import static com.a506.comeet.exception.errorcode.CustomErrorCode.NO_MEMBER;
 
 @Service
 @Transactional(readOnly = true)

@@ -1,6 +1,6 @@
 package com.a506.comeet.metadata.repository;
 
-import com.a506.comeet.common.util.KeyUtil;
+import com.a506.comeet.global.util.KeyUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;

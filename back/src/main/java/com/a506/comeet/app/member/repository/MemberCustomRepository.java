@@ -1,7 +1,7 @@
 package com.a506.comeet.app.member.repository;
 
-import com.a506.comeet.app.member.controller.dto.MemberDetailResponseDto;
-import com.a506.comeet.app.member.controller.dto.MemberSimpleResponseDto;
+import com.a506.comeet.app.member.dto.MemberDetailResponseDto;
+import com.a506.comeet.app.member.dto.MemberSimpleResponseDto;
 
 import java.util.List;
 import java.util.Optional;

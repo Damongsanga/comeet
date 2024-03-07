@@ -1,7 +1,7 @@
 package com.a506.comeet.app.member.repository;
 
 
-import com.a506.comeet.app.member.controller.dto.MemberSimpleResponseDto;
+import com.a506.comeet.app.member.dto.MemberSimpleResponseDto;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;

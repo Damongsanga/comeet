@@ -1,6 +1,6 @@
 package com.a506.comeet.app.room.repository;
 
-import com.a506.comeet.app.room.controller.dto.RoomSimpleResponseDto;
+import com.a506.comeet.app.room.dto.RoomSimpleResponseDto;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;

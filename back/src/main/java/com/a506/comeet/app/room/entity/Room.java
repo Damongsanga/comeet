@@ -1,10 +1,10 @@
 package com.a506.comeet.app.room.entity;
 
 import com.a506.comeet.app.member.entity.Member;
-import com.a506.comeet.app.room.controller.dto.RoomUpdateRequestDto;
-import com.a506.comeet.common.BaseEntity;
-import com.a506.comeet.common.enums.RoomConstraints;
-import com.a506.comeet.common.enums.RoomType;
+import com.a506.comeet.app.room.dto.RoomUpdateRequestDto;
+import com.a506.comeet.global.entity.BaseEntity;
+import com.a506.comeet.global.enums.RoomConstraints;
+import com.a506.comeet.global.enums.RoomType;
 import com.a506.comeet.app.keyword.entity.RoomKeyword;
 import jakarta.persistence.*;
 

@@ -1,8 +1,8 @@
 package com.a506.comeet.app.board.entity;
 
-import com.a506.comeet.app.board.controller.dto.CommentUpdateRequestDto;
+import com.a506.comeet.app.board.dto.CommentUpdateRequestDto;
 import com.a506.comeet.app.member.entity.Member;
-import com.a506.comeet.common.BaseEntity;
+import com.a506.comeet.global.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

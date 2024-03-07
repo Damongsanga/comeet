@@ -1,7 +1,7 @@
 package com.a506.comeet.auth;
 
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.response.ErrorResponse;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.response.ErrorResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.ExpiredJwtException;

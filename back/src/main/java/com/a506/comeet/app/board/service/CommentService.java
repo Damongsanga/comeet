@@ -1,16 +1,16 @@
 package com.a506.comeet.app.board.service;
 
-import com.a506.comeet.app.board.controller.dto.CommentCreateRequestDto;
-import com.a506.comeet.app.board.controller.dto.CommentSearchResponseDto;
-import com.a506.comeet.app.board.controller.dto.CommentUpdateRequestDto;
+import com.a506.comeet.app.board.dto.CommentCreateRequestDto;
+import com.a506.comeet.app.board.dto.CommentSearchResponseDto;
+import com.a506.comeet.app.board.dto.CommentUpdateRequestDto;
 import com.a506.comeet.app.board.entity.Board;
 import com.a506.comeet.app.board.entity.Comment;
 import com.a506.comeet.app.board.repository.BoardRepository;
 import com.a506.comeet.app.board.repository.CommentRepository;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.repository.MemberRepository;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

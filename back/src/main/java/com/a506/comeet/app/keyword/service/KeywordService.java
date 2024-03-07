@@ -1,12 +1,12 @@
 package com.a506.comeet.app.keyword.service;
 
-import com.a506.comeet.admin.controller.dto.KeywordRequestDto;
+import com.a506.comeet.admin.dto.KeywordRequestDto;
 import com.a506.comeet.app.keyword.controller.KeywordResponseDto;
 import com.a506.comeet.app.keyword.entity.Keyword;
 import com.a506.comeet.app.keyword.repository.KeywordRepository;
 import com.a506.comeet.app.keyword.repository.RoomKeywordRepository;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

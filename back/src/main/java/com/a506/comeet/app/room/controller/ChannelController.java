@@ -1,8 +1,8 @@
 package com.a506.comeet.app.room.controller;
 
-import com.a506.comeet.common.util.MemberUtil;
-import com.a506.comeet.app.room.controller.dto.ChannelCreateRequestDto;
-import com.a506.comeet.app.room.controller.dto.ChannelUpdateRequestDto;
+import com.a506.comeet.global.util.MemberUtil;
+import com.a506.comeet.app.room.dto.ChannelCreateRequestDto;
+import com.a506.comeet.app.room.dto.ChannelUpdateRequestDto;
 import com.a506.comeet.app.room.entity.Channel;
 import com.a506.comeet.app.room.service.ChannelService;
 import jakarta.validation.Valid;

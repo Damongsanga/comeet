@@ -1,6 +1,6 @@
 package com.a506.comeet.auth.controller.dto;
 
-import com.a506.comeet.app.room.controller.dto.RoomSimpleResponseDto;
+import com.a506.comeet.app.room.dto.RoomSimpleResponseDto;
 import com.a506.comeet.auth.JwtToken;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

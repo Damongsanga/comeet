@@ -1,17 +1,17 @@
 package com.a506.comeet.app.member.service;
 
-import com.a506.comeet.app.member.controller.dto.FollowRequestDto;
-import com.a506.comeet.app.member.controller.dto.FollowerRequestDto;
-import com.a506.comeet.app.member.controller.dto.FollowingReqeustDto;
-import com.a506.comeet.app.member.controller.dto.UnfollowRequestDto;
-import com.a506.comeet.app.member.controller.dto.MemberSimpleResponseDto;
+import com.a506.comeet.app.member.dto.FollowRequestDto;
+import com.a506.comeet.app.member.dto.FollowerRequestDto;
+import com.a506.comeet.app.member.dto.FollowingReqeustDto;
+import com.a506.comeet.app.member.dto.UnfollowRequestDto;
+import com.a506.comeet.app.member.dto.MemberSimpleResponseDto;
 import com.a506.comeet.app.member.entity.Follow;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.repository.FollowRepository;
 import com.a506.comeet.app.member.repository.MemberRepository;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;

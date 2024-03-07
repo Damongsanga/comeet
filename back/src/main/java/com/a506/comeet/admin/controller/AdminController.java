@@ -1,9 +1,8 @@
 package com.a506.comeet.admin.controller;
 
-import com.a506.comeet.admin.controller.dto.KeywordRequestDto;
+import com.a506.comeet.admin.dto.KeywordRequestDto;
 import com.a506.comeet.app.keyword.service.KeywordService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

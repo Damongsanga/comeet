@@ -1,10 +1,10 @@
 package com.a506.comeet.app.member.entity;
 
-import com.a506.comeet.app.etc.entity.Til;
-import com.a506.comeet.app.member.controller.dto.MemberUpdateRequestDto;
+import com.a506.comeet.app.til.entity.Til;
+import com.a506.comeet.app.member.dto.MemberUpdateRequestDto;
 import com.a506.comeet.app.room.entity.RoomMember;
-import com.a506.comeet.common.BaseEntity;
-import com.a506.comeet.common.enums.MemberFeature;
+import com.a506.comeet.global.entity.BaseEntity;
+import com.a506.comeet.global.enums.MemberFeature;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

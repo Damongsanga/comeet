@@ -1,17 +1,17 @@
 package com.a506.comeet.auth.service;
 
-import com.a506.comeet.app.etc.repository.NoteRepository;
+import com.a506.comeet.app.note.repository.NoteRepository;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.repository.MemberRepository;
-import com.a506.comeet.app.room.controller.dto.RoomSimpleResponseDto;
+import com.a506.comeet.app.room.dto.RoomSimpleResponseDto;
 import com.a506.comeet.app.room.repository.RoomMemberRepository;
-import com.a506.comeet.common.util.AES128Util;
+import com.a506.comeet.global.util.AES128Util;
 import com.a506.comeet.auth.JwtToken;
 import com.a506.comeet.auth.JwtTokenProvider;
 import com.a506.comeet.auth.controller.dto.LoginResponseDto;
 import com.a506.comeet.auth.repository.JwtRedisRepository;
-import com.a506.comeet.common.util.KeyUtil;
-import com.a506.comeet.error.exception.RestApiException;
+import com.a506.comeet.global.util.KeyUtil;
+import com.a506.comeet.exception.RestApiException;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static com.a506.comeet.error.errorcode.CustomErrorCode.*;
+import static com.a506.comeet.exception.errorcode.CustomErrorCode.*;
 
 @Service
 @Transactional(readOnly = true)

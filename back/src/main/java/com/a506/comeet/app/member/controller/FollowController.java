@@ -1,7 +1,7 @@
 package com.a506.comeet.app.member.controller;
 
-import com.a506.comeet.common.util.MemberUtil;
-import com.a506.comeet.app.member.controller.dto.*;
+import com.a506.comeet.app.member.dto.*;
+import com.a506.comeet.global.util.MemberUtil;
 import com.a506.comeet.app.member.service.FollowService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

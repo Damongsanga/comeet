@@ -1,9 +1,9 @@
 package com.a506.comeet.app.board.controller;
 
-import com.a506.comeet.app.board.controller.dto.*;
+import com.a506.comeet.app.board.dto.*;
 import com.a506.comeet.app.board.entity.Board;
 import com.a506.comeet.app.board.service.BoardService;
-import com.a506.comeet.common.util.MemberUtil;
+import com.a506.comeet.global.util.MemberUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -41,7 +41,7 @@ public class BoardController {
 
     @GetMapping
     public ResponseEntity<Page<BoardListResponseDto>> search(BoardListRequestDto req,
-        @PageableDefault(size = 10) Pageable pageable){
+                                                             @PageableDefault(size = 10) Pageable pageable){
         return ResponseEntity.ok(boardService.search(req, pageable));
     }
 

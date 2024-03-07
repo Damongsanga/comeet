@@ -4,10 +4,10 @@ import com.a506.comeet.app.keyword.entity.Keyword;
 import com.a506.comeet.app.keyword.entity.RoomKeyword;
 import com.a506.comeet.app.keyword.repository.KeywordRepository;
 import com.a506.comeet.app.keyword.repository.RoomKeywordRepository;
-import com.a506.comeet.app.member.controller.dto.MemberSimpleResponseDto;
+import com.a506.comeet.app.member.dto.MemberSimpleResponseDto;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.repository.MemberRepository;
-import com.a506.comeet.app.room.controller.dto.*;
+import com.a506.comeet.app.room.dto.*;
 import com.a506.comeet.app.room.entity.Channel;
 import com.a506.comeet.app.room.entity.Lounge;
 import com.a506.comeet.app.room.entity.Room;
@@ -16,17 +16,17 @@ import com.a506.comeet.app.room.repository.ChannelRepository;
 import com.a506.comeet.app.room.repository.LoungeRepository;
 import com.a506.comeet.app.room.repository.RoomMemberRepository;
 import com.a506.comeet.app.room.repository.RoomRepository;
-import com.a506.comeet.common.enums.RoomType;
-import com.a506.comeet.common.util.DateParser;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
-import com.a506.comeet.image.service.S3UploadService;
+import com.a506.comeet.global.enums.RoomType;
+import com.a506.comeet.global.util.DateParser;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
+import com.a506.comeet.image.service.ImageService;
 import com.a506.comeet.metadata.repository.CustomRedisRepository;
 import com.a506.comeet.metadata.repository.MemberRedisRepository;
 import com.a506.comeet.metadata.repository.RoomRedisRepository;
 import com.a506.comeet.metadata.service.MetadataService;
-import com.a506.comeet.metadata.service.dto.MetadataCreateDto;
+import com.a506.comeet.metadata.dto.MetadataCreateDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -62,7 +62,7 @@ public class RoomService {
     private final CustomRedisRepository customRedisRepository;
 
     private final MetadataService metadataService;
-    private final S3UploadService s3UploadService;
+    private final ImageService imageService;
 
     private final String DEFAULT_CHANNEL_NAME = "기본 채널";
     private final String DEFAULT_LOUNGE_NAME = "기본 라운지";
@@ -154,7 +154,7 @@ public class RoomService {
         if (req.getRoomImage() != null) {
             String imageUrl = room.getRoomImage();
             if (!imageUrl.equals("")) {
-                s3UploadService.deleteImage(imageUrl, "roomImage/");
+                imageService.deleteImage(imageUrl, "roomImage/");
             }
         }
     }

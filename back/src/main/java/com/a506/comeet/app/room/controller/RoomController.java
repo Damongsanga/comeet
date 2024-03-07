@@ -1,12 +1,12 @@
 package com.a506.comeet.app.room.controller;
 
-import com.a506.comeet.app.room.controller.dto.*;
+import com.a506.comeet.app.room.dto.*;
 import com.a506.comeet.app.room.entity.Room;
 import com.a506.comeet.app.room.service.RoomService;
-import com.a506.comeet.common.util.MemberUtil;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
-import com.a506.comeet.image.service.S3UploadService;
+import com.a506.comeet.global.util.MemberUtil;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.RestApiException;
+import com.a506.comeet.image.service.ImageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +27,7 @@ import java.util.List;
 public class RoomController {
 
     private final RoomService roomService;
-    private final S3UploadService s3UploadService;
+    private final ImageService imageService;
 
     @PostMapping("")
     public ResponseEntity<RoomSimpleResponseDto> create(@Valid @RequestBody RoomCreateRequestDto req) {
@@ -55,7 +55,7 @@ public class RoomController {
     public ResponseEntity<Void> updateImage(
             @RequestParam("roomImageFile") MultipartFile multipartFile, @PathVariable Long roomId) {
         String memberId = MemberUtil.getMemberId();
-        String url = s3UploadService.saveFile(multipartFile, "roomImage/");
+        String url = imageService.saveFile(multipartFile, "roomImage/");
         log.info("url : {}", url);
 
         roomService.update(RoomUpdateRequestDto

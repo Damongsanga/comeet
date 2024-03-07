@@ -1,15 +1,15 @@
 package com.a506.comeet.app.member.controller;
 
-import com.a506.comeet.app.member.controller.dto.MemberDetailResponseDto;
-import com.a506.comeet.app.member.controller.dto.MemberDuplicationRequestDto;
-import com.a506.comeet.app.member.controller.dto.MemberSigninRequestDto;
-import com.a506.comeet.app.member.controller.dto.MemberUpdateRequestDto;
+import com.a506.comeet.app.member.dto.MemberDetailResponseDto;
+import com.a506.comeet.app.member.dto.MemberDuplicationRequestDto;
+import com.a506.comeet.app.member.dto.MemberSigninRequestDto;
+import com.a506.comeet.app.member.dto.MemberUpdateRequestDto;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.service.MemberService;
-import com.a506.comeet.common.util.MemberUtil;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
-import com.a506.comeet.image.service.S3UploadService;
+import com.a506.comeet.global.util.MemberUtil;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.RestApiException;
+import com.a506.comeet.image.service.ImageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +26,7 @@ import java.util.List;
 public class MemberController {
 
     private final MemberService memberService;
-    private final S3UploadService s3UploadService;
+    private final ImageService imageService;
 
     @PostMapping("")
     public ResponseEntity<String> signup(@RequestBody @Valid MemberSigninRequestDto req){
@@ -47,7 +47,7 @@ public class MemberController {
     public ResponseEntity<Void> updateImage(
             @RequestParam("profileImageFile") MultipartFile multipartFile) {
         String memberId = MemberUtil.getMemberId();
-        String url = s3UploadService.saveFile(multipartFile, "profileImage/");
+        String url = imageService.saveFile(multipartFile, "profileImage/");
         log.info("created url: {}", url);
         memberService.update(MemberUpdateRequestDto
                 .builder()

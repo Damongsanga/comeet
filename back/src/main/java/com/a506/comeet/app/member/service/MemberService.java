@@ -1,16 +1,16 @@
 package com.a506.comeet.app.member.service;
 
-import com.a506.comeet.app.member.controller.dto.MemberDetailResponseDto;
-import com.a506.comeet.app.member.controller.dto.MemberDuplicationRequestDto;
-import com.a506.comeet.app.member.controller.dto.MemberSigninRequestDto;
-import com.a506.comeet.app.member.controller.dto.MemberUpdateRequestDto;
+import com.a506.comeet.app.member.dto.MemberDetailResponseDto;
+import com.a506.comeet.app.member.dto.MemberDuplicationRequestDto;
+import com.a506.comeet.app.member.dto.MemberSigninRequestDto;
+import com.a506.comeet.app.member.dto.MemberUpdateRequestDto;
 import com.a506.comeet.app.member.entity.Member;
 import com.a506.comeet.app.member.repository.MemberRepository;
 import com.a506.comeet.app.room.repository.RoomMemberRepository;
-import com.a506.comeet.error.errorcode.CommonErrorCode;
-import com.a506.comeet.error.errorcode.CustomErrorCode;
-import com.a506.comeet.error.exception.RestApiException;
-import com.a506.comeet.image.service.S3UploadService;
+import com.a506.comeet.exception.errorcode.CommonErrorCode;
+import com.a506.comeet.exception.errorcode.CustomErrorCode;
+import com.a506.comeet.exception.RestApiException;
+import com.a506.comeet.image.service.ImageService;
 import com.a506.comeet.metadata.service.MetadataService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -28,7 +28,7 @@ public class MemberService {
     private final RoomMemberRepository roomMemberRepository;
     private final PasswordEncoder passwordEncoder;
     private final MetadataService metadataService;
-    private final S3UploadService s3UploadService;
+    private final ImageService imageService;
 
     @Transactional
     public Member create(MemberSigninRequestDto req) {
@@ -104,7 +104,7 @@ public class MemberService {
         if (req.getProfileImage() != null) {
             String imageUrl = member.getProfileImage();
             if (!imageUrl.equals("")) {
-                s3UploadService.deleteImage(imageUrl, "profileImage/");
+                imageService.deleteImage(imageUrl, "profileImage/");
             }
         }
     }
