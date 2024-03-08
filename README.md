@@ -86,8 +86,7 @@
 
 ## 🎨 아키텍처
 
-<img width="1000" alt="image" src="./doc/Comeet_Architecture.png
-">
+<img width="1000" alt="image" src="./doc/Comeet_Architecture.png">
 
 ## 💡 주요 기능
 
